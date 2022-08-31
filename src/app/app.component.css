@@ -1,0 +1,34 @@
+.link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  width: calc(100% / 3);
+  padding: 16px 0;
+}
+
+.active {
+  color: #000;
+  background-color: #ccc;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 24px;
+}
+
+.currentLang {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-left: auto;
+  text-decoration: none;
+  color: #000
+}
+
+.currentLangTitle {
+  opacity: .6;
+}

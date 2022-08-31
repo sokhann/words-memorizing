@@ -1,0 +1,23 @@
+.grid {
+  margin-top: 16px;
+  display: grid;
+  grid-gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 16px 0;
+}
+
+.dist { opacity: .7 }
+
+.input {
+  display: block;
+}
+
+.empty {
+  opacity: .6;
+  text-transform: uppercase;
+}

@@ -1,0 +1,35 @@
+<div class="grid">
+  <div>
+    <h3 class="title">{{title}}</h3>
+
+    <p *ngIf="words.length === 0" class="empty">no words added</p>
+    <mat-list>
+      <mat-list-item *ngFor="let word of words">
+        <span mat-line>{{word.src}}</span>
+        <span mat-line class="dist">{{word.dist}}</span>
+        <button mat-icon-button aria-label="delete" (click)="removeWord(word)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+  <div>
+    <h3 class="title">Add words</h3>
+
+    <form
+      class="example-form"
+      (ngSubmit)="translateWord()"
+    >
+      <p>Enter {{langFromText}} word you want to learn here</p>
+
+      <mat-form-field appearance="fill" class="input">
+        <mat-label>Word to translate</mat-label>
+        <input matInput [formControl]="wordToTranslate"/>
+      </mat-form-field>
+
+      <button mat-flat-button color="primary" type="submit">Translate</button>
+    </form>
+  </div>
+</div>

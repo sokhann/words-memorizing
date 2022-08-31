@@ -1,0 +1,22 @@
+<div class="go">
+  <div
+    class="note"
+    *ngIf="!src || !expectedDist"
+  >
+    You need to add some {{langFromText}} words into the dictionary to start exercise
+  </div>
+  <form
+    *ngIf="src && expectedDist"
+  >
+    <h3 class="title">Translate word from {{langFromText}} into {{langToText}}:</h3>
+    <div>
+      <h4 class="translate-src">{{src}}</h4>
+      <div class="answer">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="answer" value="" [formControl]="answer" />
+        </mat-form-field>
+        <button mat-flat-button color="primary" class="check-btn" (click)="giveAnswer()">Check</button>
+      </div>
+    </div>
+  </form>
+</div>

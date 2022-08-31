@@ -1,0 +1,27 @@
+.go {
+  margin-top: 16px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 32px 0;
+}
+
+.note {
+  color: #ff7355;
+}
+
+.translate-src {
+  font-size: 18px;
+}
+
+.answer {
+  display: flex;
+  align-items: stretch;
+}
+
+.check-btn {
+  margin-left: 10px;
+  margin-bottom: 1.34375em;
+}

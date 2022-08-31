@@ -1,0 +1,25 @@
+<form class="settings" [formGroup]="settingsForm" (ngSubmit)="saveSettings()">
+    <mat-form-field appearance="fill">
+        <mat-label>Translate from</mat-label>
+        <mat-select formControlName="langFrom">
+            <mat-option *ngFor="let language of languages" [value]="language.value">
+                {{language.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+  -
+    <mat-form-field appearance="fill">
+        <mat-label>Translate to</mat-label>
+        <mat-select formControlName="langTo">
+            <mat-option *ngFor="let language of languages" [value]="language.value">
+                {{language.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="error" *ngIf="settingsForm.get(['langFrom']).value === settingsForm.get(['langTo']).value"
+    >
+        Languages must be different
+    </div>
+    <br />
+    <button mat-flat-button color="primary" type="submit">Save</button>
+</form>

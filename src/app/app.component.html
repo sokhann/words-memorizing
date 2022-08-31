@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-toolbar>
+    <h1>{{title}}</h1>
+    <a class="currentLang" routerLink="/settings"><span class="currentLangTitle">current language:</span> {{langFrom}} &#8594; {{langTo}}</a>
+  </mat-toolbar>
+
+  <nav mat-tab-nav-bar>
+    <a class="link" routerLink="/recently-added" routerLinkActive="active">Recently Added</a>
+    <a class="link" routerLink="/go" routerLinkActive="active">Go</a>
+    <a class="link" routerLink="/settings" routerLinkActive="active">Settings</a>
+  </nav>
+  <!-- The routed views render in the <router-outlet>-->
+  <router-outlet></router-outlet>
+</div>
